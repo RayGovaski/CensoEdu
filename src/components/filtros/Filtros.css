@@ -1,0 +1,121 @@
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #f9f6ef;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.custom-select-trigger {
+  background-color: #D4C8B8;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 500;
+  color: #373435;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  height: 36px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.custom-select-trigger:hover {
+  background-color: #C7BCAE;
+}
+
+.custom-select-trigger.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 0 0 2px #8D7A6F;
+}
+
+.selected-value {
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 8px;
+}
+
+.custom-select-arrow {
+  font-size: 12px;
+  color: #373435;
+  transition: transform 0.2s ease;
+}
+
+.custom-select-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.custom-options {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  background-color: #f9f6ef;
+  border: 1px solid #D4C8B8;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+
+  scrollbar-width: thin;
+  scrollbar-color: #8D7A6F #E0D8C7;
+}
+
+.custom-options::-webkit-scrollbar {
+  width: 8px;
+  background-color: #E0D8C7;
+  border-radius: 4px;
+}
+
+.custom-options::-webkit-scrollbar-thumb {
+  background-color: #8D7A6F;
+  border-radius: 4px;
+  border: 1px solid #E0D8C7;
+}
+
+.custom-options::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.custom-options::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.custom-option {
+  padding: 8px 12px;
+  color: #373435;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.custom-option:hover {
+  background-color: #8D7A6F;
+  color: #ffffff;
+}
+
+.custom-option.selected {
+  background-color: #756359;
+  color: #ffffff;
+  font-weight: bold;
+}

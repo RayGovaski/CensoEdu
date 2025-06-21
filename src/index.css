@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 8px; 
+  background-color: #f9f6ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8D7A6F;
+  border-radius: 4px; 
+  border: 1px solid #f9f6ef;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+html {
+  scrollbar-width: thin; 
+  scrollbar-color: #8D7A6F #f9f6ef; 
+}

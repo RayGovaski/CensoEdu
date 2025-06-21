@@ -1,0 +1,68 @@
+
+.sobre-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--card-bg); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.sobre-titulo-principal {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-dark); 
+  text-align: center;
+  border-bottom: 2px solid var(--border-color); 
+  padding-bottom: 10px;
+  transition: color 0.3s ease, border-color 0.3s ease; 
+}
+
+.sobre-paragrafo {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: var(--text-medium); 
+  text-align: justify;
+  transition: color 0.3s ease; 
+}
+
+.sobre-subtitulo {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  border-left: 5px solid var(--primary-color); 
+  padding-left: 10px;
+  transition: color 0.3s ease, border-left-color 0.3s ease; 
+}
+
+.sobre-lista {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text-medium); 
+  list-style-type: disc;
+  margin-left: 40px;
+  transition: color 0.3s ease; 
+}
+
+.sobre-lista li {
+  margin-bottom: 10px;
+}
+
+.sobre-destaque {
+  font-weight: bold;
+  color: var(--accent-color); 
+  transition: color 0.3s ease; 
+}
+
+.sobre-contato {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 25px;
+  color: var(--text-medium); 
+  text-align: center;
+  transition: color 0.3s ease; 
+}
