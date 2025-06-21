@@ -7,7 +7,7 @@ import { RiGraduationCapFill } from 'react-icons/ri';
 
 import './Sidebar.css';
 
-import { useTheme } from '../../context/ThemeContext'; // Importa o hook useTheme
+import { useTheme } from './ThemeContext'; // Importa o hook useTheme
 
 const Sidebar = () => {
   const [isMatriculasOpen, setIsMatriculasOpen] = useState(false);

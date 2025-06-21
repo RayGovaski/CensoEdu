@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/sidebar/Sidebar';
+import Sidebar from './pages/SideBar.jsx';
 import Escolas from './pages/Escola';
 import Professores from './pages/Professores';
 import Creche from './pages/Creche';
@@ -15,7 +15,7 @@ import EducacaoInfantil from './pages/EducacaoInfantil';
 import './App.css';
 import './theme.css';
 
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './pages/ThemeContext.jsx';
 
 function App() {
   return (
