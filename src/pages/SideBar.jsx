@@ -1,4 +1,3 @@
-// src/components/sidebar/Sidebar.jsx
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdOutlineFindInPage, MdAppRegistration } from 'react-icons/md';
@@ -8,6 +7,11 @@ import { RiGraduationCapFill } from 'react-icons/ri';
 import './Sidebar.css';
 
 import { useTheme } from './ThemeContext'; // Importa o hook useTheme
+
+// IMPORTE AS IMAGENS AQUI
+import LogoLight from '../assets/Logo.png'; // Nomeie como preferir para o tema claro
+import LogoDark from '../assets/Logo1.png'; // Nomeie como preferir para o tema escuro
+
 
 const Sidebar = () => {
   const [isMatriculasOpen, setIsMatriculasOpen] = useState(false);
@@ -56,6 +60,9 @@ const Sidebar = () => {
     return location.pathname === href;
   };
 
+  // Define a imagem do logo com base no tema
+  const currentLogo = theme === 'light' ? LogoLight : LogoDark;
+
   return (
     <>
       <div className="navbar-mobile lg:hidden">
@@ -72,7 +79,12 @@ const Sidebar = () => {
             )}
           </button>
           <Link to="/">
-            <div className="logo-image" aria-label="Logo do Sistema"></div>
+            {/* Aplica a imagem do logo dinamicamente */}
+            <div
+              className="logo-image"
+              aria-label="Logo do Sistema"
+              style={{ backgroundImage: `url(${currentLogo})` }}
+            ></div>
           </Link>
           {/* Botão de alternar tema para navbar mobile */}
           <button onClick={toggleTheme} className="theme-toggle-button" aria-label="Toggle theme">
@@ -146,7 +158,12 @@ const Sidebar = () => {
       <div className="sidebar-desktop">
         <div className="sidebar-header">
           <Link to="/" className="logo-wrapper">
-            <div className="logo-image" aria-label="Logo do Sistema"></div>
+            {/* Aplica a imagem do logo dinamicamente */}
+            <div
+              className="logo-image"
+              aria-label="Logo do Sistema"
+              style={{ backgroundImage: `url(${currentLogo})` }}
+            ></div>
           </Link>
           {/* Botão de alternar tema para sidebar desktop */}
           <button onClick={toggleTheme} className="theme-toggle-button-desktop" aria-label="Toggle theme">
